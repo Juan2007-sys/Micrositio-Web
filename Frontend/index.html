@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsite - Juan Quevedo Ovalle</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+  <!-- 🔹 Encabezado con navegación -->
+  <header>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#catalogo">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔹 Layout principal con 2 columnas -->
+  <main id="layout">
+
+    <!-- 📱 Chat lateral -->
+    <aside id="chat-lateral">
+      <h2>💬 Chat con IA</h2>
+      <form id="chat-form">
+        <label for="tipo">Tipo de consulta:</label>
+        <select id="tipo" required>
+          <option value="significado">Significado de nombre</option>
+          <option value="sentimiento">Análisis de sentimiento</option>
+          <option value="general">Chat general</option>
+        </select>
+        <input type="text" id="input-chat" placeholder="Escribe aquí..." required>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="chat-box"></div>
+    </aside>
+
+    <!-- 📂 Contenido principal -->
+    <div id="contenido">
+
+      <!-- 🔹 Sección 1: Hoja de vida -->
+      <section id="home" class="cv">
+        <div class="cv-container">
+          <div class="cv-foto">
+            <img src="static/img/foto hoja de vida.jpg" alt="Foto de Juan Quevedo Ovalle">
+          </div>
+          <div class="cv-info">
+            <h1>👋 Hola, soy Juan Quevedo Ovalle</h1>
+            <h3>Estudiante de Ingeniería de Software</h3>
+            <p>
+              Apasionado por el desarrollo web y la inteligencia artificial.
+              Actualmente estoy en 4º semestre y disfruto creando aplicaciones
+              modernas con buenas prácticas de programación.
+            </p>
+
+            <h3>💻 Skills</h3>
+            <ul class="cv-skills">
+              <li>HTML, CSS, JavaScript</li>
+              <li>Python, FastAPI</li>
+              <li>React, MySQL, Git/GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🔹 Sección 2: Proyectos -->
+      <section id="catalogo">
+        <h2>📂 Mis Proyectos</h2>
+        <div class="grid" id="proyectos"></div>
+      </section>
+
+      <!-- 🔹 Sección 3: Contacto -->
+      <section id="contacto">
+        <h2>📬 Contáctame</h2>
+        <form id="formContacto" class="contact-form">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" placeholder="Tu correo" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" placeholder="Tu teléfono">
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="status"></p>
+      </section>
+    </div>
+  </main>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <p>© 2025 Juan Quevedo Ovalle - Microsite Académico</p>
+  </footer>
+
+  <!-- Botón para mostrar/ocultar chat -->
+  <button id="toggle-chat" style="position:fixed;top:80px;left:10px;z-index:1100;padding:10px 14px;border-radius:50%;background:#2e8bff;color:#fff;font-size:1.6rem;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.12);cursor:pointer;">🤖</button>
+
+  <!-- Scripts -->
+  <script src="JS/script.js"></script>
+  <script src="JS/contacto.js"></script>
+  <script src="JS/chat.js"></script>
+  <!-- Leaflet -->
+  
+
+</body>
+</html>
