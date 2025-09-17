@@ -20,7 +20,7 @@ def inicio():
 app = FastAPI()
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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"  # Reemplaza con tu clave de API real
+    api_key="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"  # Reemplaza con tu clave de API real
 )
 
 #Add Function
